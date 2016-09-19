@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="Contactos.master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Contactanos</title>
+     <meta name="viewport" content="width=device-width" />
+     <link href="css/bootstrap.min.css" rel="stylesheet" />
+     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1>hola</h1>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
