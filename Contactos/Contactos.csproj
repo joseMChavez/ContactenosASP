@@ -58,6 +58,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Contactos.mdf" />
+    <Content Include="App_Data\Contactos_log.ldf">
+      <DependentUpon>Contactos.mdf</DependentUpon>
+    </Content>
     <Content Include="Consulta.aspx" />
     <Content Include="Contactanos.aspx" />
     <Content Include="Web.config" />

@@ -5,22 +5,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Contactanos</title>
-     <meta name="viewport" content="width=device-width" />
-     <link href="css/bootstrap.min.css" rel="stylesheet" />
-     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="css/estilos.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <h1>hola</h1>
+
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <nav class="navbar navbar-default  colorJMC">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">CONTACTAME.COM</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    
+                    <li class="active"><a href="#">Contacto</a></li>
+                    <li><a href="#">Consultar</a></li>
+                  
+                </ul>
+            </div>
+        </nav>
+        <div>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="panel panel-default gris">
+                <p class="text-center">JMC-Todos los Derechos Reservados 2016</p>
+            </div>
+        </div>
     </form>
+    <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
