@@ -15,6 +15,14 @@ namespace Contactos
         {
             Label1.Text = this.Session["nombre"].ToString();
             Label2.Text = this.Session["apellido"].ToString();
+            if (Request.Cookies["mail"] == null)
+            {
+                Label3.Text = "No existe la cookie edad";
+            }
+            else
+            {
+                Label3.Text = this.Request.Cookies["mail"].Value;
+            }
         }
         private void Limpiar()
         {

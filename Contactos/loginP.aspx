@@ -5,7 +5,7 @@
     <div class="container">
         <div class="panel panel-success">
             <div class="panel-heading">
-                ENTRADA</div>
+                <h3>ENTRADA</h3></div>
             <div class="panel-body">
 
                 <div class="form-horizontal col-md-12" role="form">
@@ -13,7 +13,7 @@
                     <div class="form-group">
 
                         <label class="col-md-4 col-sm-4 col-xs-12 control-label input-sm" for="TextBoxName">Nombre</label>
-                        <div class="col-md-2 col-xs-8">
+                        <div class="col-md-4 col-xs-8">
                                <asp:TextBox ID="TextBoxName" CssClass="form-control " runat="server"></asp:TextBox>
                         </div>
                         
@@ -26,14 +26,24 @@
                         <div class="col-md-3 col-xs-12">
                                <asp:TextBox ID="TextBoxApe" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                         </div>
-                     <div class="col-md-2 col-xs-8">
+                     
+
+                    </div>
+                   <%-- MAil --%>
+                    <div class="form-group">
+
+                        <label class="col-md-4 col-sm-4 col-xs-12 control-label input-sm" for="TextBoxName">Email</label>
+                        <div class="col-md-4 col-xs-8">
+                               <asp:TextBox ID="TextBox1" CssClass="form-control " runat="server"></asp:TextBox>
+                        </div>
+                        <div class="col-md-2 col-xs-8">
                             <asp:LinkButton CssClass="btn btn-primary btn-sm" ID="ButtonBuscar" runat="server" OnClick="ButtonBuscar_Click"><span class="glyphicon glyphicon-send"></span> </asp:LinkButton>
                         </div>
 
                     </div>
-                  
 
                 </div>
             </div>
     </div>
+        </div>
 </asp:Content>

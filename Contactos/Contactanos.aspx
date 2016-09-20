@@ -7,8 +7,10 @@
         <div class="panel panel-success">
             <div class="panel-heading">
                <h3> Contactanos</h3>
+                <h4>Bienvenido/a .</h4>
                 <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                 <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
             </div>
             <div class="panel-body">
 
