@@ -18,7 +18,7 @@ namespace Contactos
         {
             //Almacenamos las dos variables de sesion
             Session["usuario"] = TextBoxId.Text;
-            Session["clave"] = TextBoxName.Text;
+            Session["clave"] = TextBoxName.ToString();
             //Redireccionamos a la siguiente pagina
             Response.Redirect("Contactanos.aspx");
         }

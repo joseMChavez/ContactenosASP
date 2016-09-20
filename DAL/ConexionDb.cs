@@ -16,7 +16,7 @@ namespace DAL
 
         public ConexionDb()
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConStr"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConString"].ConnectionString);
             Cmd = new SqlCommand();
         }
 

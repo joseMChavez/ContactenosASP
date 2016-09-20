@@ -6,12 +6,14 @@
     <div class="container">
         <div class="panel panel-success">
             <div class="panel-heading">
-                Contactanos
+               <h3> Contactanos</h3>
+                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
             </div>
             <div class="panel-body">
 
                 <div class="form-horizontal col-md-12" role="form">
-                    <%-- Nombre --%>
+                    <%-- ID --%>
                     <div class="form-group">
 
                         <label class="col-md-4 col-sm-4 col-xs-12 control-label input-sm" for="TextBoxName">Id</label>
