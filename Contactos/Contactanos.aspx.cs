@@ -13,8 +13,8 @@ namespace Contactos
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = this.Session["usuario"].ToString();
-            Label2.Text = this.Session["clave"].ToString();
+            Label1.Text = this.Session["nombre"].ToString();
+            Label2.Text = this.Session["apellido"].ToString();
         }
         private void Limpiar()
         {
