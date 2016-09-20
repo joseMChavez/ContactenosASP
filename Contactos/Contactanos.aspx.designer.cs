@@ -40,6 +40,15 @@ namespace Contactos {
         protected global::System.Web.UI.WebControls.TextBox TextBoxName;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// TextBoxEmail control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace Contactos {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
+        
+        /// <summary>
+        /// RequiredFieldValidatorEm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEm;
         
         /// <summary>
         /// TextBoxAsunto control.
@@ -58,6 +76,15 @@ namespace Contactos {
         protected global::System.Web.UI.WebControls.TextBox TextBoxAsunto;
         
         /// <summary>
+        /// RequiredFieldValidatorAS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorAS;
+        
+        /// <summary>
         /// TextBoxMensaje control.
         /// </summary>
         /// <remarks>
@@ -65,6 +92,15 @@ namespace Contactos {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxMensaje;
+        
+        /// <summary>
+        /// RequiredFieldValidatorM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorM;
         
         /// <summary>
         /// ButtonNuevo control.
