@@ -13,22 +13,43 @@ namespace Contactos
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (Request.Cookies["mail"] == null)
+
+            if (!this.IsPostBack)
             {
-                Label3.Text = "No existe la cookie edad";
+                Mensajes mensaje = new Mensajes();
+
+
+                if (Request.QueryString["Id"] != null)
+                {
+                    string id = Request.QueryString["Id"].ToString();
+
+                    if (mensaje.Buscar(int.Parse(id)))
+                    {
+                        DevolverDatos(mensaje);
+                        TextBoxId.Focus();
+                    }
+                    else
+                    {
+                        Response.Write("<Script> alert('" + TextBoxId.Text + " No Existe!')</Script>");
+                    }
+                }
+
+
+                if (Request.Cookies["mail"] == null)
+                {
+                    Label3.Text = "No existe la cookie edad";
+                }
+                else
+                {
+                    Label3.Text = this.Request.Cookies["mail"].Value;
+                    Label1.Text = this.Session["nombre"].ToString();
+                    Label2.Text = this.Session["apellido"].ToString();
+                }
             }
-            else
-            {
-                Label3.Text = this.Request.Cookies["mail"].Value;
-                Label1.Text = this.Session["nombre"].ToString();
-                Label2.Text = this.Session["apellido"].ToString();
-            }
-        }
         private void Limpiar()
         {
             TextBoxId.Text = string.Empty;
-            TextBoxName.Text= string.Empty;
+            TextBoxName.Text = string.Empty;
             TextBoxEmail.Text = string.Empty;
             TextBoxAsunto.Text = string.Empty;
             TextBoxMensaje.Text = string.Empty;
@@ -94,8 +115,8 @@ namespace Contactos
             }
             catch (Exception ex)
             {
-                
-                Response.Write("<Script> alert('"+ ex.Message + "')</Script>");
+
+                Response.Write("<Script> alert('" + ex.Message + "')</Script>");
             }
         }
 
@@ -132,10 +153,11 @@ namespace Contactos
         {
             Mensajes mensaje = new Mensajes();
             int id = int.Parse(TextBoxId.Text);
+
             try
             {
                 CargarDatos(mensaje);
-                if (!TextBoxId.Text.Equals(""))
+                if (!String.IsNullOrWhiteSpace(TextBoxId.Text))
                 {
                     if (mensaje.Buscar(id))
                     {
