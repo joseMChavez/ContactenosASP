@@ -37,7 +37,7 @@ namespace Contactos
 
                 if (Request.Cookies["mail"] == null)
                 {
-                    Label3.Text = "No existe la cookie edad";
+                    Label3.Text = "No existe la cookie Email";
                 }
                 else
                 {
@@ -46,6 +46,7 @@ namespace Contactos
                     Label2.Text = this.Session["apellido"].ToString();
                 }
             }
+        }
         private void Limpiar()
         {
             TextBoxId.Text = string.Empty;
@@ -102,7 +103,7 @@ namespace Contactos
                 {
                     if (!TextBoxName.Text.Equals("") && !TextBoxEmail.Text.Equals("") && !TextBoxAsunto.Text.Equals("") && !TextBoxMensaje.Text.Equals(""))
                     {
-                        if (mensaje.Insertar())
+                        if (mensaje.Editar())
                         {
                             Response.Write("<script>alert('Modificado Correctamente')</script>");
                         }

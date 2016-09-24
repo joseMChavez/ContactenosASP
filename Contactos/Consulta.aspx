@@ -15,28 +15,30 @@
                     <div class="form-group">
                         <label class="col-md-2 col-sm-4 col-xs-12 control-label input-sm" for="DropDLFiltro">Filtrar por:</label>
                         <div class="col-md-4 col-md-4 col-xs-12">
-                            <asp:DropDownList ID="DropDLFiltro" CssClass="form-control input-sm" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="DropDLFiltro" CssClass="form-control input-sm" readOnly="true" runat="server">
+                                <asp:ListItem Value="Id">Id</asp:ListItem>
+                                <asp:ListItem Value="Nombre">Nombre</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                         <div class="col-md-4 col-xs-12">
                             <asp:TextBox ID="TextBoxFiltro" CssClass="form-control input-sm" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ControlToValidate="TextBoxFiltro" ID="RequiredFieldValidatorAS" runat="server" ErrorMessage="Introduzca El Asunto del Mensaje" ForeColor="#ff0000" BorderColor="#cc0000"></asp:RequiredFieldValidator>
                         </div>
                         <div class="col-md-2  col-md-2 col-xs-8">
-                            <asp:LinkButton CssClass="btn btn-primary btn-sm" ID="ButtonBuscar" runat="server"><span class="glyphicon glyphicon-search"></span> </asp:LinkButton>
+                            <asp:LinkButton CssClass="btn btn-primary btn-sm" ID="ButtonBuscar" runat="server" OnClick="ButtonBuscar_Click" Width="36px"><span class="glyphicon glyphicon-search"></span> </asp:LinkButton>
                         </div>
                     </div>
 
                 </div>
-                <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="Id">
+                <asp:GridView cssClass=" table table-responsive table-bordered table-hover" ID="GridView1" runat="server">
                     <Columns>
-                        <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                        <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                        <asp:BoundField DataField="Asunto" HeaderText="Asunto" SortExpression="Asunto" />
-                        <asp:BoundField DataField="Mensaje" HeaderText="Mensaje" SortExpression="Mensaje" />
+                        <asp:HyperLinkField
+                                        DataNavigateUrlFields="Id"
+                                        DataNavigateUrlFormatString="Contactanos.aspx?Id={0}"
+                                        Text="Ver" />
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConString %>" SelectCommand="SELECT * FROM [Mensajes]"></asp:SqlDataSource>
+               
             </div>
 
 
